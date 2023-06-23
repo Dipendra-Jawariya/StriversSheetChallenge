@@ -1,0 +1,61 @@
+bool check(string str,int i ,int j) {
+  while( i<=j) {
+    if(str[i] == str[j]) {
+      i++;
+      j--;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+int minCharsforPalindrome(string str) {
+	int n = str.size();
+  int i = 0;
+  int j = n-1;
+  while(i <= j) {
+    bool ch = check(str,i,j);
+    if(str[i] == str[j]) {
+      i++;
+      j--;
+    } else {
+      j--;
+    }
+  }
+	return n-j-1;
+}
+
+
+
+
+
+bool check(string str,int i ,int j) {
+  while( i<=j) {
+    if(str[i] == str[j]) {
+      i++;
+      j--;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+int minCharsforPalindrome(string str) {
+	int n = str.size();
+  int i = 0;
+  int j = n-1;
+  int temp = j;
+  int cnt  = 0;
+  while(i <= j) {
+    if(str[i] == str[j]) {
+      i++;
+      j--;
+    }else {
+      cnt++;
+      temp--;
+      i= 0;
+      j = temp;
+    }
+  }
+	return cnt;
+}
