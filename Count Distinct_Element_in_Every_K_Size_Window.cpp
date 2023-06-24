@@ -20,7 +20,7 @@ vector<int> countDistinctElements(vector<int> &arr, int k) {
   vector<int> ans;
   int i = 0, j = 0, n = arr.size();
   unordered_map<int, int> mp;
-
+ //xbn
   while (j < n) {
     mp[arr[j]]++;
     if (j - i + 1 < k)
